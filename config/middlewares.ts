@@ -1,21 +1,21 @@
 module.exports = [
-  'strapi::errors',
+  "strapi::errors",
   {
-    name: 'strapi::cors',
+    name: "strapi::cors",
     config: {
       enabled: true,
       origin: [
-        'http://localhost:3000',        // for local dev website
-        'https://your-university-site.com' // your prod website domain
+        "https://www.charusat.ac.in/", // your frontend
+        "http://localhost:3000", // optional dev
       ],
     },
   },
-  'strapi::security',
-  'strapi::poweredBy',
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  "strapi::security",
+  "strapi::poweredBy",
+  "strapi::logger",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];
