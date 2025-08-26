@@ -1,9 +1,18 @@
-export default [
-  'strapi::logger',
+module.exports = [
   'strapi::errors',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: [
+        'http://localhost:3000',        // for local dev website
+        'https://your-university-site.com' // your prod website domain
+      ],
+    },
+  },
   'strapi::security',
-  'strapi::cors',
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
